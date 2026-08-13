@@ -262,12 +262,13 @@ a { color: inherit; text-decoration: none; }
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
   position: relative;
   z-index: 1;
+  text-align: center;
+}
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
 }
 .hero-label {
   font-family: var(--font-mono);
@@ -293,13 +294,14 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.05rem;
   color: rgba(255,255,255,0.65);
   line-height: 1.8;
-  margin-bottom: 2.5rem;
-  max-width: 480px;
+  margin: 0 auto 2.5rem auto;
+  max-width: 560px;
 }
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .btn-primary {
   display: inline-flex;
@@ -369,6 +371,59 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
   margin-top: 0.5rem;
+}
+
+/* ── Home highlight teasers (Seminar Series / Pre-conference) ── */
+.home-highlight {
+  background: var(--warm-white);
+  border-top: 1px solid var(--border);
+}
+.home-highlight.alt {
+  background: var(--sage-pale);
+}
+.home-highlight-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+.home-highlight.reverse .home-highlight-inner {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+.home-highlight.reverse .highlight-text { order: 2; }
+.home-highlight.reverse .highlight-card { order: 1; }
+.highlight-text .section-lead { margin-bottom: 0; }
+.highlight-cta { margin-top: 1.75rem; }
+.highlight-card {
+  background: var(--warm-white);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2.5rem;
+  box-shadow: var(--shadow-soft);
+}
+.highlight-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.75rem;
+}
+.highlight-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 1.1rem;
+}
+.highlight-card-detail {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  margin-top: 0.55rem;
 }
 
 /* ── Home feature strips ── */
@@ -992,8 +1047,10 @@ footer {
   .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
   .nav-links.open { display: flex; }
   .nav-hamburger { display: flex; }
-  .home-hero-inner { grid-template-columns: 1fr; }
-  .hero-stats { display: none; }
+  .home-highlight-inner,
+  .home-highlight.reverse .home-highlight-inner { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 2rem; }
+  .home-highlight.reverse .highlight-text,
+  .home-highlight.reverse .highlight-card { order: initial; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .mission-pillars { grid-template-columns: 1fr; }
   .keynote-grid { grid-template-columns: 1fr; }
