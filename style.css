@@ -238,24 +238,29 @@ a { color: inherit; text-decoration: none; }
   bottom: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  z-index: 2;
 }
-.hero-bg-pattern {
+.hero-photo {
   position: absolute;
-  inset: 0;
-  opacity: 0.04;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,1) 60px, rgba(255,255,255,1) 61px),
-    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,1) 60px, rgba(255,255,255,1) 61px);
+  top: -80px;
+  right: 0;
+  bottom: -80px;
+  left: 0;
+  background-image: url('hero-beach.jpg');
+  background-size: cover;
+  background-position: center 42%;
+  z-index: 0;
   pointer-events: none;
+  will-change: transform;
 }
-.hero-glow {
+.hero-overlay {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(90,138,110,0.2) 0%, transparent 70%);
-  top: -100px;
-  right: -100px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
   pointer-events: none;
 }
 .home-hero-inner {
@@ -263,7 +268,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
 }
 .hero-content {
@@ -1047,6 +1052,7 @@ footer {
   .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
   .nav-links.open { display: flex; }
   .nav-hamburger { display: flex; }
+  .hero-photo { background-image: url('hero-beach-mobile.jpg'); }
   .home-highlight-inner,
   .home-highlight.reverse .home-highlight-inner { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 2rem; }
   .home-highlight.reverse .highlight-text,
