@@ -69,6 +69,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Hero photo parallax ──
+  const heroPhoto = document.querySelector('.hero-photo');
+  const heroSection = document.querySelector('.home-hero');
+  if (heroPhoto && heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const speed = 0.35; // how much slower the photo moves than the page
+    let ticking = false;
+
+    const updateParallax = () => {
+      const rect = heroSection.getBoundingClientRect();
+      // Only move the photo while the hero is at least partly on screen
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        heroPhoto.style.transform = `translateY(${window.scrollY * speed}px)`;
+      }
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateParallax();
+  }
+
   // ── Scroll reveal (subtle) ──
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver((entries) => {
