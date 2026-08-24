@@ -178,7 +178,24 @@ a { color: inherit; text-decoration: none; }
   max-width: 560px;
   margin: 0 auto;
 }
-
+.page-hero-photo {
+  background-image: url('mission-hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.page-hero-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+.page-hero-photo .page-hero-eyebrow,
+.page-hero-photo h1,
+.page-hero-photo p {
+  position: relative;
+  z-index: 2;
+}
 /* ── Section container ── */
 .section {
   max-width: 1200px;
