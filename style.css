@@ -196,6 +196,24 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   z-index: 2;
 }
+.page-hero-photo-preconf {
+  background-image: url('preconference-hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.page-hero-photo-preconf::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+.page-hero-photo-preconf .page-hero-eyebrow,
+.page-hero-photo-preconf h1,
+.page-hero-photo-preconf p {
+  position: relative;
+  z-index: 2;
+}
 /* ── Section container ── */
 .section {
   max-width: 1200px;
