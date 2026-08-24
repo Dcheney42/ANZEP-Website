@@ -214,6 +214,19 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   z-index: 2;
 }
+.mission-hero-photo-full {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  bottom: -80px;
+  left: 0;
+  background-image: url('mission-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+/* ── Section container ── */
 /* ── Section container ── */
 .section {
   max-width: 1200px;
