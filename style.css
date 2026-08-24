@@ -1,10 +1,10 @@
-/* =============================================
+* =============================================
    ANZEP — Australian & New Zealand Environmental Psychology Network
    Design system: deep navy anchor, warm sage accent, clean scholarly feel
    ============================================= */
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
-
+ 
 /* ── Tokens ── */
 :root {
   --navy:       #131127;
@@ -20,19 +20,19 @@
   --text-light: #7a788f;
   --border:     #e2dfd8;
   --accent:     #c9a84c;   /* warm gold — signature element */
-
+ 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
   --font-mono:    'Space Mono', monospace;
-
+ 
   --radius-sm: 4px;
   --radius-md: 10px;
   --radius-lg: 20px;
-
+ 
   --shadow-soft: 0 2px 16px rgba(19,17,39,0.08);
   --shadow-mid:  0 4px 32px rgba(19,17,39,0.14);
 }
-
+ 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -45,7 +45,7 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
-
+ 
 /* ── Navigation ── */
 .nav {
   position: sticky;
@@ -139,7 +139,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 2px;
   transition: 0.3s;
 }
-
+ 
 /* ── Page Hero ── */
 .page-hero {
   background: var(--navy);
@@ -227,7 +227,6 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
 }
 /* ── Section container ── */
-/* ── Section container ── */
 .section {
   max-width: 1200px;
   margin: 0 auto;
@@ -260,7 +259,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.8;
   max-width: 640px;
 }
-
+ 
 /* ── Divider ── */
 .divider {
   width: 48px;
@@ -269,7 +268,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 2px;
   margin: 1.5rem 0;
 }
-
+ 
 /* ── HOME HERO ── */
 .home-hero {
   background: var(--navy);
@@ -388,7 +387,7 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
 }
 .btn-outline:hover { border-color: rgba(255,255,255,0.6); color: #fff; transform: translateY(-1px); }
-
+ 
 /* Hero right panel — stat cards */
 .hero-stats {
   display: grid;
@@ -425,7 +424,7 @@ a { color: inherit; text-decoration: none; }
   color: rgba(255,255,255,0.7);
   margin-top: 0.5rem;
 }
-
+ 
 /* ── Home highlight teasers (Seminar Series / Pre-conference) ── */
 .home-highlight {
   background: var(--warm-white);
@@ -478,7 +477,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--text-mid);
   margin-top: 0.55rem;
 }
-
+ 
 /* ── Home feature strips ── */
 .home-features {
   background: var(--sand);
@@ -537,7 +536,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
 }
 .feature-card a:hover { color: var(--navy); }
-
+ 
 /* ── Mission page ── */
 .mission-body {
   background: var(--warm-white);
@@ -598,7 +597,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
 }
-
+ 
 /* ── Team page ── */
 .team-grid {
   display: grid;
@@ -666,7 +665,7 @@ a { color: inherit; text-decoration: none; }
   padding-top: 0.75rem;
   border-top: 1px solid var(--border);
 }
-
+ 
 /* ── Pre-conference page ── */
 .preconf-upcoming {
   background: var(--navy);
@@ -757,7 +756,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.75rem;
   color: rgba(255,255,255,0.5);
 }
-
+ 
 /* Past conference cards */
 .past-conf-card {
   background: var(--warm-white);
@@ -796,7 +795,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.75;
   margin-bottom: 1.5rem;
 }
-
+ 
 /* Schedule table */
 .schedule-table {
   width: 100%;
@@ -831,7 +830,7 @@ a { color: inherit; text-decoration: none; }
 .schedule-event { font-weight: 500; color: var(--navy); }
 .schedule-detail { font-size: 0.82rem; color: var(--text-mid); }
 .schedule-speaker { font-size: 0.8rem; color: var(--sage); font-style: italic; }
-
+ 
 /* Keynote cards */
 .keynote-grid {
   display: grid;
@@ -871,7 +870,7 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid var(--border);
   font-style: italic;
 }
-
+ 
 /* Lightning talks */
 .lightning-section { margin-top: 2rem; }
 .lightning-header {
@@ -921,7 +920,7 @@ a { color: inherit; text-decoration: none; }
   margin-top: 0.25rem;
 }
 .lt-toggle:hover { color: var(--navy); }
-
+ 
 /* ── Seminar page ── */
 .seminar-placeholder {
   background: var(--sand);
@@ -967,7 +966,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem;
   color: var(--text-mid);
 }
-
+ 
 /* ── Mailing list / contact section ── */
 .contact-strip {
   background: var(--navy);
@@ -1031,7 +1030,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto 1rem;
   max-width: 480px;
 }
-
+ 
 /* ── Footer ── */
 footer {
   background: var(--navy-mid);
@@ -1061,7 +1060,7 @@ footer {
   transition: color 0.2s;
 }
 .footer-right a:hover { color: rgba(255,255,255,0.7); }
-
+ 
 /* ── Tabs ── */
 .tabs {
   display: flex;
@@ -1090,7 +1089,7 @@ footer {
 .tab-btn:hover { color: var(--navy); }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
-
+ 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .team-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1124,3 +1123,4 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+ 
