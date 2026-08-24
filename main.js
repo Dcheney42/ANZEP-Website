@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Hero photo parallax ──
-  const heroPhoto = document.querySelector('.hero-photo');
+  const heroPhoto = document.querySelector('.hero-photo, .mission-hero-photo-full');
   const heroSection = document.querySelector('.home-hero');
   if (heroPhoto && heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const speed = 0.35; // how much slower the photo moves than the page
