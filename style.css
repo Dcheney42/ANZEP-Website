@@ -197,9 +197,6 @@ a { color: inherit; text-decoration: none; }
   z-index: 2;
 }
 .page-hero-photo-preconf {
-  background-image: url('preconference-hero.jpg');
-  background-size: cover;
-  background-position: center;
 }
 .page-hero-photo-preconf::after {
   content: '';
@@ -225,6 +222,19 @@ a { color: inherit; text-decoration: none; }
   background-position: center;
   z-index: 0;
   pointer-events: none;
+}
+.preconf-hero-photo {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  bottom: -80px;
+  left: 0;
+  background-image: url('preconference-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
 }
 /* ── Section container ── */
 .section {
