@@ -231,7 +231,7 @@ a { color: inherit; text-decoration: none; }
   bottom: -80px;
   left: 0;
   background-image: url('preconference-hero.jpg');
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center;
   z-index: 0;
   pointer-events: none;
