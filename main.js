@@ -23,22 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Mailing list signup ──
-  const signupForm = document.querySelector('.signup-form');
-  const signupSuccess = document.querySelector('.signup-success');
-  if (signupForm) {
-    signupForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = signupForm.querySelector('input[type="email"]').value;
-      if (email) {
-        signupForm.style.display = 'none';
-        if (signupSuccess) {
-          signupSuccess.style.display = 'block';
-          signupSuccess.textContent = `Thanks! We've noted ${email} for our mailing list. We'll be in touch soon.`;
-        }
-      }
-    });
-  }
 
   // ── Lightning talk toggle ──
   document.querySelectorAll('.lt-toggle').forEach(btn => {
